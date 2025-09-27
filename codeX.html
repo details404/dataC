@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <form class="sounds">
+<p class="data"></p>
+<input type="text" id="inputField"/>
+</form>
+<script>
+  const data = document.querySelector(".data");
+  const inputField = document.querySelector('input[id*="inputField"');
+  inputField.addEventListener("input", () =>{
+    data.innerHTML = inputField.value;
+  });
+</script>
+<style>
+  body{
+    background: #000d0d;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .data {
+    color: #f3f3f3;
+    font-family: sans-serif;
+    font-size: 1rem;
+  }
+  #inputField {
+    border-color: #f3f3f3;
+    background:  #000d0d;
+    color: #f3f3f3;
+    
+  }
+  #inputField:active{
+    animation: trigger 3s infinite;
+  }
+  @keyframes trigger{
+    0%{border-color: #f3f3f3; border: 2px solid #f3f3f3;}
+    10%{border-color: #32fff6;}
+  }
+</style>
+<script>
+  curve = document.querySelector("#inputField");
+  curve.placeholder = `input logic`;
+  curve.style.borderRadius = "20px";
+</script>
+<script>
+const click = document.querySelector("#inputField");
+click.addEventListener("input", () =>{
+  if(inputField.value === "z"){
+    const audio = new Audio("./a.mp3");
+    const sounds = document.querySelector(".sounds");
+    audio.play();
+    
+   btn = document.createElement("button");
+   btn.type = `submit`;
+  }
+if(inputField.value === "x"){
+    const audio = new Audio("./w.mp3");
+    audio.play();
+  }
+if(inputField.value === "c"){
+    const audio = new Audio("./s.mp3");
+    audio.play();
+  }
+if(inputField.value === "v"){
+    const audio = new Audio("./e.mp3");
+    audio.play();
+  }
+if(inputField.value === "b"){
+    const audio = new Audio("./d.mp3");
+    audio.play();
+  }
+if(inputField.value === "n"){
+    const audio = new Audio("./f.mp3");
+    audio.play();
+  }
+ if(inputField.value === "m"){
+    const audio = new Audio("./t.mp3");
+    audio.play();
+  }
+    else{
+      console.log("not found");
+    }
+});
+
+  
+</script>
+</body>
+
+</html>

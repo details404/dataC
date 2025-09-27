@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  :root{
+    --primary-color: #000d0d;
+    --secondary-color: #f3f3f3;
+    --border-radius: 26px;
+  }
+</style>
+<body>
+<button class="linkBtn">controller</button>
+<script encoding="UTF-8">
+const linkBtn = document.querySelector(".linkBtn");
+linkBtn.addEventListener("click", () =>{
+const a = document.createElement('a');
+url = "./codeX.html";
+a.href =  `${url}`;
+a.click();
+});
+</script>
+<style>
+.linkBtn{
+background: #000d0d;
+color: #f3f3f3;
+border-radius: 20px;
+position: absolute;
+right: 0;
+}
+</style>
+  <div class="container">
+<div class="ads"></div>
+<div class="links">
+  <a id="left" href=""></a>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <a id="right" href=""></a>
+</div>
+  </div>
+  <style>
+    .container{
+      height: 360px;
+      width: 600px;
+      border: 1px var(--primary-color) solid;
+      position: relative;
+      top: 100px;
+    }
+    .container .ads{
+      position: fixed;
+      left: 200px;
+      top: 120px;
+      background: var(--primary-color);
+      border-radius: var(--border-radius);
+      height: 200px;
+      width: 200px;
+      overflow: auto;
+      color: var(--secondary-color);
+    }
+
+    .container .links{
+      display: flex;
+      position: relative;
+      top: 250px;
+      left: 176px;
+    }
+    .container .links #left{
+      text-align: left;
+      height: 100px;
+      width: 100px;
+      background: var(--secondary-color);
+      border: 1px var(--primary-color) solid;
+      border-radius: var(--border-radius);
+    }
+    
+    .container .links #right{
+      text-align: right;
+      height: 100px;
+      width: 100px;
+      background: var(--primary-color);
+      border: 1px var(--secondary-color);
+      border-radius: var(--border-radius);
+    }
+  </style>
+  <div class="container">
+    <footer>
+      <p>Getting ready for my scripts tag</p>
+    </footer>
+  </div>
+  <?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@id/help" android:title="Instructions" />
+	<item android:id="@id/feedback" android:title="Feedback" />
+	<item android:id="@id/rateapp" android:title="Rate this App" />
+	<item android:id="@id/moreapp" android:title="More Apps" />
+	<item android:id="@id/contact" android:title="About" />
+</menu>
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/keyboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginTop="10.0sp" android:text="Server IP:" android:fontFamily="serif-monospace" />
+	<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<Button android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/dark_green" android:gravity="center" android:id="@id/serverip" android:background="@color/zxing_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/default_IP" android:onClick="LoadIP" />
+		<TextView android:textStyle="italic" android:textColor="#ffffffff" android:layout_gravity="center" android:paddingTop="5.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Click on IP to Edit" />
+	</LinearLayout>
+	<Space android:layout_width="wrap_content" android:layout_height="25.0sp" />
+	<LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<Button android:layout_gravity="center" android:background="@drawable/enterip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="EnterIP" />
+		<TextView android:textSize="20.0sp" android:layout_gravity="center" android:layout_width="70.0dip" android:layout_height="wrap_content" android:text="OR" />
+		<Button android:id="@id/scancode" android:background="@drawable/qrcode" android:layout_width="106.0dip" android:layout_height="fill_parent" android:onClick="scancode" />
+	</LinearLayout>
+	<Button android:layout_gravity="center" android:id="@id/btnsend" android:background="@drawable/button_connect" android:layout_width="107.0dip" android:layout_height="105.0dip" android:onClick="initConnection" />
+	<Space android:layout_width="wrap_content" android:layout_height="20.0sp" />
+	<LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingBottom="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<Button android:layout_gravity="center" android:id="@id/launch" android:background="@drawable/button_keys" android:layout_width="90.0sp" android:layout_height="90.0sp" android:onClick="OpenKeyBoard" />
+		<Space android:layout_width="75.0sp" android:layout_height="fill_parent" />
+		<Button android:layout_gravity="center" android:id="@id/launchMouse" android:background="@drawable/ic_wifisettings" android:layout_width="90.0sp" android:layout_height="90.0sp" android:onClick="OpenMouse" />
+	</LinearLayout>
+	<RelativeLayout android:gravity="center" android:id="@id/banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="5.0sp" android:paddingTop="5.0sp" android:paddingRight="5.0sp" android:paddingBottom="5.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0">
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="10.0">
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="1.0">
+				<RelativeLayout android:gravity="center_horizontal" android:id="@id/BannerKey" android:background="@drawable/bannar_back" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_weight="6.0" />
+			</LinearLayout>
+		</RelativeLayout>
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="80.0">
+			<sampu.wifikeyboard.Mouse.MouseView android:id="@id/settingsPad" android:background="@drawable/settings_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+		</RelativeLayout>
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="10.0">
+			<Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:background="@color/colorAccent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Left" android:layout_weight="3.0" android:onClick="LeftClick" android:textAllCaps="false" android:fontFamily="casual" />
+			<Button android:background="@drawable/ic_keyboard" android:layout_width="45.0sp" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="OpenKeyBoard" />
+			<Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:background="#ffff4f00" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Right" android:layout_weight="3.0" android:onClick="RightClick" android:textAllCaps="false" android:fontFamily="casual" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<androidx.viewpager.widget.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+	<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/DotLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0sp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+	<Button android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/nextslide" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Next" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="LoadNextSlide" />
+	<Button android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/prevslide" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:onClick="LoadPrevSlide" />
+</RelativeLayout>
+<div class="boot"></div>
+  <script encoding="UTF-8" src="confirmation.js"></script>
+  <script encoding="UTF-8">
+    var settings = (function(left){
+      return{
+        left: left,
+        set: function(){
+        document.getElementById("right").innerText = `${right}`;}}
+    })(left);
+    settings.set();
+    var setAbt = (function(right){
+      return{
+        right: right,
+        set: function(){
+          document.getElementById("left").innerText = `${right}`;
+        }
+      }
+    })(right);
+    setAbt.set();
+    
+let leftClick = 0;
+const rightClick = ++leftClick;
+console.log(`leftClick:${leftClick}, rightClick:${rightClick}`);
+
+let lClick = 0;
+const rClick = ++lClick;
+console.log(`l:${lClick}, rClick:${rClick}`);
+
+l = "log++";
+r = "log++";
+console.log(`${l}, ${r}`);
+
+
+/*
+let right = 3;
+const left = ++right;
+console.log(``);*/
+
+const main = document.querySelector(".boot");
+mouse = "logger";
+main.style.animation = `${mouse} 3s infinite`;
+const xml = document.createElement("xml");
+xml.textContent = main;
+  </script>
+  <style>
+    .boot{
+      width: 50px;
+      height: 50px;
+      background: var(--secondary-color);
+      borderRadius : 20px;
+    }
+    @keyframes logger{
+      0%{background:var(--secondary-color)}
+      10%{background: var(--primary-color)}
+    }
+  </style>
+</body>
+
+</html>
